@@ -1,4 +1,4 @@
-/* * Solution to Project Euler problem 3 C++ */
+/* * Solution to Project Euler problem 3 C++  */
 #include <cstdlib> 
 #include "iostream"  // less than and greater than are disabled
 
