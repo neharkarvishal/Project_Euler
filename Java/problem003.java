@@ -1,4 +1,4 @@
-/* * Solution to Project Euler problem 3 in Java */
+/* * Solution to Project Euler problem 3 in Java  */
 
 package project.euler.java;
 
