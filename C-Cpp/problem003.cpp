@@ -13,7 +13,7 @@ int main(int argc, char** argv)
             N = N/2;
         }
         
-        for(long factor = 3; factor < N; factor = factor + 2)
+        for(long factor = 3; factor*factor <= N; factor = factor + 2)
         {
             while(N % factor == 0 && factor < N)
             {
