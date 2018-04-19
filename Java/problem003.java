@@ -13,7 +13,7 @@ public class problem003
             N = N/2;
         }
         
-        for(long factor = 3; factor < N; factor = factor + 2)
+        for(long factor = 3; factor*factor <= N; factor = factor + 2)
         {
             while(N % factor == 0 && factor < N)
             {
