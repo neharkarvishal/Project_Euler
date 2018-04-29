@@ -1,3 +1,4 @@
+/* * Solution to Project Euler problem 4 Java  */
 import java.io.*;
 import java.util.*;
 import java.text.*;
