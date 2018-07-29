@@ -1,5 +1,62 @@
 /* * Solution to Project Euler problem 5 in C++ */
+#include <bits/stdc++.h>
+using namespace std;
 
+const int Max = 40;
+
+int p[Max];
+int dp[Max];
+
+int main()
+{
+
+    for (int i = 1; i <= Max; ++i)
+    {
+        p[i] = 1;
+    }
+
+    for (int i = 2; i <= Max; ++i)
+    {
+        if (p[i] == 1)
+        {
+            p[i] = i;
+            for (int j = 2 * i; j <= Max; j += i)
+            {
+                if (p[j] == 1)
+                {
+                    p[j] = i;
+                }
+                else
+                {
+                    p[j] = 0;
+                }
+            }
+        }
+    }
+
+    dp[1] = 1;
+    for (int i = 2; i <= Max; i++)
+    {
+        if (p[i] > 0)
+        {
+            dp[i] = dp[i - 1] * p[i];
+        }
+        else
+        {
+            dp[i] = dp[i - 1];
+        }
+    }
+
+    int t, n;
+    cin >> t;
+    for (int q = 0; q < t; ++q)
+    {
+        cin >> n;
+        cout << dp[n] << "\n";
+    }
+    return 0;
+}
+/*
 #include <iostream>
 using namespace std;
 
@@ -54,3 +111,4 @@ int main()
     }
     return 0;
 }
+*/
